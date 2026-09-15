@@ -8,9 +8,9 @@ turtle.listen()
 coords = ""
 x,y = "", ""
 
-t = turtle.Turtle(visible = False)
+t = turtle.Turtle(visible = False) # makes the turtle that draws the borders
 
-t.up()
+t.up()  # these each draw a different part of the border
 t.backward(400)
 t.setheading(90)
 t.backward(300)
@@ -71,7 +71,7 @@ t.end_fill()
 
 
 
-tu = turtle.Turtle(visible=False)
+tu = turtle.Turtle(visible=False) # makes the turtle you sketch with, so that clearing doesn't get rid of the borders
 tu.up()
 tu.setpos(0, 0)
 tu.down()
@@ -82,7 +82,7 @@ def forward():
     global x, y 
     coords = tu.pos()
     x,y = coords
-    if x <= 300:
+    if x <= 300: # these make sure you're not going out of the bounds
         tu.setheading(0)
         tu.forward(10)
 
@@ -120,7 +120,7 @@ def clear():
 
 
 print(x, y)
-turtle.onkeypress(forward, 'Right')
+turtle.onkeypress(forward, 'Right') # checks for keystrokes so it knows when to move
 turtle.onkeypress(backward, 'Left')
 turtle.onkeypress(upwards, 'Up')
 turtle.onkeypress(downwards, 'Down')
