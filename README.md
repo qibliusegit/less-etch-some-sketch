@@ -2,13 +2,13 @@
 tl;dr low quality virtual etch-a-sketch
 
 
-So fun fact, I've actually never used an Etch-A-Sketch before! But I thought it'd be cool to look at how they work, and after learning that they can't move in multiple directions at once (seriously, how are people drawing actual art with those things), I thought I would try my hand at making one using Python's Turtle library, since I'm somewhat familiar with it.
+So fun fact, I've actually never used an Etch-A-Sketch before! But I thought it'd be cool to look at how they work, and after learning that they can't move in multiple directions at once (seriously, how are people drawing actual art with those things), I thought I would try my hand at making one using Python's Turtle library, since I'm somewhat familiar with it (though I will admit I had to learn a couple new things for this project).
 
 Here are the controls:
 
-| Up Arrow| Down Arrow || Left Arrow | Right Arrow | Spacebar|
+| Arrow Keys | Spacebar |
 | --- | --- |
-| Draws upwards | Draws downwards || Draws to the right | Draws to the left| Clears the screen |
+| Draw lines in their respective directions | Clears the screen |
 
 ---
 
