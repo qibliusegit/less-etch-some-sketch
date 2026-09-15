@@ -5,34 +5,54 @@ s = t.Screen()
 s.setup(width= 800, height=600)
 t.listen()
 
+coords = t.pos()
+x,y = coords
+
 
 def forward():
-    t.forward(10)
+    global coords
+    global x, y 
+    coords = t.pos()
+    x,y = coords
+    if x <= 400:
+        t.setheading(0)
+        t.forward(10)
 
 def backward():
-    t.backward(10)
+    global coords
+    global x, y 
+    coords = t.pos()
+    x,y = coords
+    if x >= -400:
+        t.setheading(0)
+        t.backward(10)
 
-def up():
-    t.up()
-    t.left(90)
-    t.down()
-    t.forward(10)
-    t.setheading(0)
+def upwards():
+    global coords
+    global x, y 
+    coords = t.pos()
+    x,y = coords
+    if y <= 300:    
+        t.setheading(90)
+        t.forward(10)
+    
 
-def down():
-    t.up()
-    t.left(90)
-    t.down()
-    t.backward(10)
-    t.setheading(0)
+def downwards():
+    global coords
+    global x, y 
+    coords = t.pos()
+    x,y = coords
+    if y >= -300:
+        t.setheading(90)
+        t.backward(10)
+    
 
 def clear():
     t.clear()
 
 t.onkeypress(forward, 'Right')
 t.onkeypress(backward, 'Left')
-t.onkeypress(up, 'Up')
-t.onkeypress(down, 'Down')
+t.onkeypress(upwards, 'Up')
+t.onkeypress(downwards, 'Down')
 t.onkeypress(clear, 'space')
-
 t.done()
